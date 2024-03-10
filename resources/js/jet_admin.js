@@ -43,4 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 document.addEventListener('livewire:navigated', () => {
     applyDarkModeIfSet();
+    if (typeof initFlowbite === 'function') {
+        initFlowbite();
+    }
 });
