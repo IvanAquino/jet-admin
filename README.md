@@ -1,21 +1,21 @@
-# Jetstream livewire admin
+# JJetAdmin
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ivanaquino/jet-admin.svg?style=flat-square)](https://packagist.org/packages/ivanaquino/jet-admin)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ivanaquino/jet-admin/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ivanaquino/jet-admin/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ivanaquino/jet-admin/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ivanaquino/jet-admin/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ivanaquino/jet-admin.svg?style=flat-square)](https://packagist.org/packages/ivanaquino/jet-admin)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This is a 
 
-## Support us
+## Libraries
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/jet-admin.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/jet-admin)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+ - [Blade Icons](https://github.com/blade-ui-kit/blade-icons)
+ - [Blade Hero icons](https://github.com/blade-ui-kit/blade-heroicons)
+ - [Flowbite](https://flowbite.com/)
 
 ## Installation
+
+This package provides an elegant and responsive admin panel and landing page layout for applications using Laravel Jetstream with Livewire. It offers a quick and easy way to scaffold your application's administrative interface and landing page, saving you time and effort in the early stages of development. 
 
 You can install the package via composer:
 
@@ -90,6 +90,11 @@ return [
      | Dashboard Navigation
      |--------------------------------------------------------------------------
      |
+     | Items in this array will be used to generate the dashboard sidebar
+     | - name: The label that will be displayed in the sidebar
+     | - route: Could be a route name or a URL
+     | - active_route: The route name or URL that will be used to determine if the item is active
+     | - icon: The icon that will be displayed in the sidebar, Heroicons' name.
      |
      |*/
     'dashboard_navigation' => [
