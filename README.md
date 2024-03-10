@@ -23,14 +23,43 @@ You can install the package via composer:
 composer require ivanaquino/jet-admin
 ```
 
-You can publish and run the migrations with:
+Some frontend features works by using flowbite so you have to install it:
 
 ```bash
-php artisan vendor:publish --tag="jet-admin-migrations"
-php artisan migrate
+npm i -D flowbite
 ```
 
-You can publish the config file with:
+Add the view paths and require Flowbite as a plugin inside `tailwind.config.js` also add darkMode:
+
+```json
+{
+    darkMode: 'class',
+    //...
+    plugins: [
+        require('flowbite/plugin')
+    ],
+}
+```
+
+Import the Flowbite JavaScript package inside the `./resources/js/app.js` file to enable the interactive components such as modals, dropdowns, navbars, and more.
+
+```js
+import 'flowbite';
+```
+
+Publish jet-admin javascript
+
+```bash
+php artisan vendor:publish --tag="jet-admin-js"
+```
+
+Now add jet-admin js to `./resources/js/app.js`
+
+```js
+import './vendor/jet_admin';
+```
+
+To change navigation items you have to publish config file:
 
 ```bash
 php artisan vendor:publish --tag="jet-admin-config"
@@ -40,6 +69,49 @@ This is the contents of the published config file:
 
 ```php
 return [
+    /*
+     |--------------------------------------------------------------------------
+     | Landing Navigation
+     |--------------------------------------------------------------------------
+     |
+     | name: Could be a string or a translation key this will be passed through the __() function
+     | route: Could be a url or a route name
+     |
+     |*/
+    'landing_navigation' => [
+        [
+            'name' => 'Home',
+            'route' => '/',
+        ],
+    ],
+
+    /*
+     |--------------------------------------------------------------------------
+     | Dashboard Navigation
+     |--------------------------------------------------------------------------
+     |
+     |
+     |*/
+    'dashboard_navigation' => [
+        [
+            'name' => 'Dashboard',
+            'route' => 'dashboard',
+            'active_route' => 'dashboard*',
+            'icon' => 'home',
+        ],
+        [
+            'name' => 'Profile',
+            'route' => 'profile.show',
+            'active_route' => 'profile.show',
+            'icon' => 'user',
+        ],
+        // [
+        //     'name' => 'Url example',
+        //     'route' => 'my-url',
+        //     'active_route' => 'my-url',
+        //     'icon' => 'shield-exclamation',
+        // ],
+    ],
 ];
 ```
 
@@ -51,9 +123,20 @@ php artisan vendor:publish --tag="jet-admin-views"
 
 ## Usage
 
-```php
-$jetAdmin = new IvanAquino\JetAdmin();
-echo $jetAdmin->echoPhrase('Hello, Ivan Aquino!');
+Landing layout
+
+```blade
+<x-jet-admin::landing-layout>
+    Your own content goes here...
+</x-jet-admin::landing-layout>
+```
+
+Dashboard ayout
+
+```blade
+<x-jet-admin::dashboard-layout>
+    Your dashboard content goes here...
+</x-jet-admin::dashboard-layout>
 ```
 
 ## Testing
