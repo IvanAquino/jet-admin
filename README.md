@@ -44,6 +44,32 @@ Add the view paths and require Flowbite as a plugin inside `tailwind.config.js` 
 }
 ```
 
+It's simple to change main color, you just have to modify the tailwind config file `tailwind.config.js`.
+
+```js
+{
+    theme: {
+        extend: {
+            // ...
+            colors: {
+                'primary': {
+                    '50': '#eaf5ff',
+                    '100': '#d9ecff',
+                    '200': '#badbff',
+                    '300': '#91c1ff',
+                    '400': '#659bff',
+                    '500': '#4273ff',
+                    '600': '#2149ff',
+                    '700': '#183bec',
+                    '800': '#1533be',
+                    '900': '#1b3494',
+                    '950': '#101d56',
+                },
+            },
+        },
+    },
+}
+
 Import the Flowbite JavaScript package inside the `./resources/js/app.js` file to enable the interactive components such as modals, dropdowns, navbars, and more.
 
 ```js
