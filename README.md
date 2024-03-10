@@ -31,7 +31,7 @@ npm i -D flowbite
 
 Add the view paths and require Flowbite as a plugin inside `tailwind.config.js` also add darkMode:
 
-```json
+```js
 {
     darkMode: 'class',
     //...
