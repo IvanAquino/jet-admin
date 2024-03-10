@@ -2,6 +2,7 @@
 
 namespace IvanAquino\JetAdmin;
 
+use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use IvanAquino\JetAdmin\Commands\JetAdminCommand;
@@ -19,7 +20,15 @@ class JetAdminServiceProvider extends PackageServiceProvider
             ->name('jet-admin')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_jet-admin_table')
+            ->hasViewComponents('jet-admin')
+            ->hasAssets()
+            // ->hasMigration('create_jet-admin_table')
             ->hasCommand(JetAdminCommand::class);
+
+        $this->publishes([
+            __DIR__ . '/../resources/js/jet_admin.js' => base_path('resources/js/vendor/jet_admin.js'),
+        ], 'jet-admin-js');
+
+        Blade::componentNamespace('IvanAquino\\JetAdmin\\View\\Components', 'jet-admin');
     }
 }
