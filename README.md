@@ -1,11 +1,11 @@
-# JJetAdmin
+# JetAdmin
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ivanaquino/jet-admin.svg?style=flat-square)](https://packagist.org/packages/ivanaquino/jet-admin)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ivanaquino/jet-admin/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ivanaquino/jet-admin/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ivanaquino/jet-admin/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ivanaquino/jet-admin/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ivanaquino/jet-admin.svg?style=flat-square)](https://packagist.org/packages/ivanaquino/jet-admin)
 
-This is a 
+This package provides an elegant and responsive admin panel and landing page layout for applications using Laravel Jetstream with Livewire. It offers a quick and easy way to scaffold your application's administrative interface and landing page, saving you time and effort in the early stages of development. 
 
 ## Libraries
 
@@ -14,8 +14,6 @@ This is a
  - [Flowbite](https://flowbite.com/)
 
 ## Installation
-
-This package provides an elegant and responsive admin panel and landing page layout for applications using Laravel Jetstream with Livewire. It offers a quick and easy way to scaffold your application's administrative interface and landing page, saving you time and effort in the early stages of development. 
 
 You can install the package via composer:
 
