@@ -25,7 +25,7 @@ class JetAdminServiceProvider extends PackageServiceProvider
             ->hasCommand(JetAdminCommand::class);
 
         $this->publishes([
-            __DIR__ . '/../resources/js/jet_admin.js' => base_path('resources/js/vendor/jet_admin.js'),
+            __DIR__.'/../resources/js/jet_admin.js' => base_path('resources/js/vendor/jet_admin.js'),
         ], 'jet-admin-js');
 
         Blade::componentNamespace('IvanAquino\\JetAdmin\\View\\Components', 'jet-admin');
