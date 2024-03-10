@@ -69,6 +69,7 @@ It's simple to change main color, you just have to modify the tailwind config fi
         },
     },
 }
+```
 
 Import the Flowbite JavaScript package inside the `./resources/js/app.js` file to enable the interactive components such as modals, dropdowns, navbars, and more.
 
