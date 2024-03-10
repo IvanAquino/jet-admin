@@ -5,7 +5,12 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ivanaquino/jet-admin/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ivanaquino/jet-admin/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ivanaquino/jet-admin.svg?style=flat-square)](https://packagist.org/packages/ivanaquino/jet-admin)
 
-This package provides an elegant and responsive admin panel and landing page layout for applications using Laravel Jetstream with Livewire. It offers a quick and easy way to scaffold your application's administrative interface and landing page, saving you time and effort in the early stages of development. 
+This package provides an elegant and responsive admin panel and landing page layout for applications using Laravel Jetstream with Livewire. It offers a quick and easy way to scaffold your application's administrative interface and landing page, saving you time and effort in the early stages of development.
+
+<p>
+    <img src="docs/dashboard_dark.jpg" style="max-width=200px;" />
+    <img src="docs/dashboard_light.jpg" style="max-width=200px;" />
+</p>
 
 ## Libraries
 
