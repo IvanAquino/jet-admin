@@ -3,8 +3,8 @@
 namespace IvanAquino\JetAdmin\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use IvanAquino\JetAdmin\JetAdminServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'IvanAquino\\JetAdmin\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'IvanAquino\\JetAdmin\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
