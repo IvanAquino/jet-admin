@@ -20,6 +20,8 @@ This package provides an elegant and responsive admin panel and landing page lay
 
 ## Installation
 
+Are you a visual learner?, check our youtube video [https://youtu.be/yPIGqrF1GAM](https://youtu.be/yPIGqrF1GAM)
+
 You can install the package via composer:
 
 ```bash
