@@ -178,7 +178,7 @@ Dashboard ayout
 {{-- OR --}}
 
 <x-jet-admin::second-dashboard-layout>
-    hola
+    Your dashboard content goes here...
 </x-jet-admin::second-dashboard-layout>
 ```
 
