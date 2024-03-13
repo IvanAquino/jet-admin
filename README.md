@@ -174,6 +174,12 @@ Dashboard ayout
 <x-jet-admin::dashboard-layout>
     Your dashboard content goes here...
 </x-jet-admin::dashboard-layout>
+
+{{-- OR --}}
+
+<x-jet-admin::second-dashboard-layout>
+    hola
+</x-jet-admin::second-dashboard-layout>
 ```
 
 ## Testing

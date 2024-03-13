@@ -174,11 +174,7 @@
                         <!-- Brand -->
                         <a href="javascript:void(0)"
                             class="inline-flex items-center gap-2 text-lg font-bold tracking-wide text-slate-800 transition hover:opacity-75 active:opacity-100 dark:text-slate-100">
-                            <svg class="hi-mini hi-bolt inline h-5 w-5 text-primary-500"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path
-                                    d="M11.983 1.907a.75.75 0 00-1.292-.657l-8.5 9.5A.75.75 0 002.75 12h6.572l-1.305 6.093a.75.75 0 001.292.657l8.5-9.5A.75.75 0 0017.25 8h-6.572l1.305-6.093z" />
-                            </svg>
+                            @svg('heroicon-o-bolt', 'hi-mini hi-bolt inline h-5 w-5 text-primary-500')
                             <span>
                                 <span class="font-medium text-primary-600 dark:text-primary-500">
                                     {{ config('app.name', 'Laravel') }}
