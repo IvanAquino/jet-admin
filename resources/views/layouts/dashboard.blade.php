@@ -94,9 +94,14 @@
                 </div>
                 <!-- END Main Navigation -->
 
-                <!-- Sub Navigation -->
-                <div class="w-full flex-none space-y-3 p-4">
-                    <button data-dropdown-toggle="user-dropdown"
+                {{-- User --}}
+                <div class="w-full flex-none space-y-3 p-4 relative" x-data="{
+                    dropdownOpen: false,
+                    toggleDropdown() {
+                        this.dropdownOpen = !this.dropdownOpen;
+                    }
+                }">
+                    <button @click="toggleDropdown()"
                         class="group flex w-full items-center gap-3 rounded-xl border border-transparent px-4 py-2.5 font-semibold text-slate-600 transition hover:bg-slate-100 active:border-slate-200 active:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-900/50 dark:active:border-slate-700/50 dark:active:text-slate-100">
                         <img src="{{ auth()->user()->profile_photo_url }}" alt="User Avatar"
                             class="inline-block h-10 w-10 rounded-full" />
@@ -108,50 +113,40 @@
                         </div>
                         @svg('heroicon-o-ellipsis-horizontal', 'hi-solid hi-dots-horizontal inline-block h-5 w-5')
                     </button>
-                    {{-- <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-                        class="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="button">Dropdown button <svg class="ms-3 h-2.5 w-2.5" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button> --}}
-
-                    <!-- Dropdown menu -->
-                    <div id="user-dropdown"
-                        class="z-10 hidden w-52 divide-y divide-gray-100 rounded-lg border border-gray-200 bg-white dark:border-none dark:bg-gray-700">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="dropdownDefaultButton">
-                            {{-- <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                            </li> --}}
-                            <li>
-                                <a href="{{ route('profile.show') }}"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    {{ __('Profile') }}
-                                </a>
-                            </li>
-                            <li>
-                                <form action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                    <button type="submit"
-                                        class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                        {{ __('Log out') }}
-                                    </button>
-                                </form>
-                            </li>
-                        </ul>
+                    <div x-show="dropdownOpen" @click.away="dropdownOpen=false"
+                        x-transition:enter="ease-out duration-200" x-transition:enter-start="-translate-y-2"
+                        x-transition:enter-end="translate-y-0"
+                        class="absolute bottom-[20px] z-50 w-56 mt-12 -translate-x-1/2 left-1/2" x-cloak>
+                        <div
+                            class="p-1 mt-1 bg-white dark:bg-gray-800 border dark:border-gray-500 rounded-md border-gray-200 text-neutral-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="{{ route('profile.show') }}"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                        {{ __('Profile') }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button type="submit"
+                                            class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                            {{ __('Log out') }}
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <!-- END Sub Navigation -->
             </nav>
             <!-- Page Sidebar -->
 
             <!-- Page Header -->
             <header id="page-header"
                 class="fixed end-0 start-0 top-0 z-30 flex h-20 flex-none items-center bg-white shadow-sm dark:bg-slate-800 lg:hidden">
-                <div class="container mx-auto flex justify-between px-4 lg:px-8 xl:max-w-5xl">
+                <div class="container mx-auto flex justify-between px-4 lg:px-8 ">
                     <!-- Left Section -->
                     <div class="flex items-center gap-2">
                         <!-- Toggle Sidebar on Mobile -->
@@ -207,7 +202,7 @@
             <!-- Page Content -->
             <main id="page-content" class="max-w-full pt-20 lg:pt-0">
                 <!-- Page Section -->
-                <div class="container mx-auto p-4 lg:p-8 xl:max-w-5xl">
+                <div class="container mx-auto p-4 lg:p-8 ">
                     {{ $slot }}
                 </div>
                 <!-- END Page Section -->
