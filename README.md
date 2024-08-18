@@ -16,9 +16,10 @@ This package provides an elegant and responsive admin panel and landing page lay
 
  - [Blade Icons](https://github.com/blade-ui-kit/blade-icons)
  - [Blade Hero icons](https://github.com/blade-ui-kit/blade-heroicons)
- - [Flowbite](https://flowbite.com/)
 
 ## Installation
+
+*Note: Flowbite package is not required anymore.*
 
 Are you a visual learner?, check our youtube video [https://youtu.be/yPIGqrF1GAM](https://youtu.be/yPIGqrF1GAM)
 
@@ -28,21 +29,12 @@ You can install the package via composer:
 composer require ivanaquino/jet-admin
 ```
 
-Some frontend features works by using flowbite so you have to install it:
-
-```bash
-npm i -D flowbite
-```
-
-Add the view paths and require Flowbite as a plugin inside `tailwind.config.js` also add darkMode:
+Add dark model to your tailwind config file `tailwind.config.js`.
 
 ```js
 {
     darkMode: 'class',
-    //...
-    plugins: [
-        require('flowbite/plugin')
-    ],
+    ...
 }
 ```
 
@@ -71,12 +63,6 @@ It's simple to change main color, you just have to modify the tailwind config fi
         },
     },
 }
-```
-
-Import the Flowbite JavaScript package inside the `./resources/js/app.js` file to enable the interactive components such as modals, dropdowns, navbars, and more.
-
-```js
-import 'flowbite';
 ```
 
 Publish jet-admin javascript
@@ -168,7 +154,7 @@ Landing layout
 </x-jet-admin::landing-layout>
 ```
 
-Dashboard ayout
+Dashboard layouts
 
 ```blade
 <x-jet-admin::dashboard-layout>
