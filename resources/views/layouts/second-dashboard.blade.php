@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="overflow-y-auto">
+                <div class="overflow-y-auto h-full">
                     <div class="w-full py-4">
                         <nav class="space-y-1">
                             <x-jet-admin::second-dashboard-team-selector />
@@ -86,7 +86,7 @@
             <header id="page-header"
                 class="fixed end-0 start-0 top-0 z-30 flex h-16 flex-none items-center bg-white shadow-sm transition-all duration-300 ease-out dark:bg-gray-900 lg:ps-64"
                 x-bind:class="{ 'lg:ps-64': desktopSidebarOpen }">
-                <div class="mx-auto flex w-full max-w-7xl justify-between px-4 lg:px-8">
+                <div class="mx-auto flex w-full  justify-between px-4 lg:px-8">
                     <!-- Left Section -->
                     <div class="flex items-center">
                         <!-- Toggle Sidebar on Mobile -->
@@ -172,7 +172,7 @@
             </header>
 
             <main id="page-content" class="flex max-w-full flex-auto flex-col pt-16">
-                <div class="mx-auto w-full max-w-7xl p-4 lg:p-8">
+                <div class="mx-auto w-full  p-4 lg:p-8">
                     {{ $slot }}
                 </div>
             </main>

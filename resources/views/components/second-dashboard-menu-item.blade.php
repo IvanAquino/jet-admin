@@ -2,9 +2,9 @@
 
 @php
     $route = Route::has($item['route']) ? route($item['route']) : $item['route'];
-    $activeRoute = isset($item['active_route']) ? $item['active_route'] : $route;
+    $activeRoute = $item['active_route'] ?? $route;
 
-    $isItemActive = Route::has($activeRoute) ? request()->routeIs($activeRoute) : request()->is($activeRoute);
+    $isItemActive = Route::has($item['route']) ? request()->routeIs($activeRoute) : request()->is($activeRoute);
 
     $itemClasses = $isItemActive
         ? 'group flex items-center gap-2 border-r-4 border-primary-400 bg-primary-50 px-5 py-0.5 text-sm font-medium text-primary-900 dark:bg-primary-800 dark:text-primary-200'
