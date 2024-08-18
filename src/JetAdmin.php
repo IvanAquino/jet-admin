@@ -2,6 +2,4 @@
 
 namespace IvanAquino\JetAdmin;
 
-class JetAdmin
-{
-}
+class JetAdmin {}
