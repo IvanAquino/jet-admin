@@ -2,6 +2,10 @@
 
 All notable changes to `jet-admin` will be documented in this file.
 
+## v0.1.4 - 2025-05-23
+
+Support for laravel 12
+
 ## v0.1.3 - 2024-08-18
 
 Flowbite package was removed
@@ -16,6 +20,7 @@ Added second dashboard layout
 <x-jet-admin::second-dashboard-layout>
     Your dashboard content goes here...
 </x-jet-admin::second-dashboard-layout>
+
 
 
 ```
